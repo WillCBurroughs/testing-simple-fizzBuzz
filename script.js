@@ -1,17 +1,21 @@
 
 
+let unorderedList = document.getElementById("outputFizz")
+
 function outputFizzBuzz(value){
 
     for(let i = 1; i <= value; i++){
+        let nextItem = document.createElement("li")
         if(i % 15 == 0){
-            console.log("FizzBuzz");
+            nextItem.textContent = "FizzBuzz";
         } else if(i % 5 == 0){
-            console.log("Fizz");
+            nextItem.textContent = "Fizz";
         } else if(i % 3 == 0){
-            console.log("Buzz");
+            nextItem.textContent = "Buzz";
         } else {
-            console.log(i);
+            nextItem.textContent = i;
         }
+        unorderedList.appendChild(nextItem)
     }
 
 }
